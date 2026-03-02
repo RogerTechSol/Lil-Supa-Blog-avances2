@@ -1,0 +1,154 @@
+/* 1. REGLAS BASE
+   Limpiamos márgenes automáticos para que nada se descuadre.
+*/
+* {
+    box-sizing: border-box; /* Evita que el padding ensanche las cajas */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #B0B3B8; /* Gris industrial de fondo */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;             /* Flexbox para centrar todo */
+    flex-direction: column;    /* Alinea el container y el footer verticalmente */
+    align-items: center;       /* Centrado horizontal */
+    padding: 40px 0;
+    min-height: 100vh;
+}
+
+/* 2. EL CONTENEDOR (La hoja blanca de la revista) */
+.container {
+    background-color: #ffffff;
+    width: 950px;
+    border: 3px solid #1B262C; /* Borde azul noche */
+    display: flex;
+    flex-direction: column;    /* Elementos uno debajo del otro */
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.1); /* Sombra decorativa */
+    /* Quitamos el margin-bottom excesivo para que el footer se controle solo */
+}
+
+/* 3. HEADER (Solución al título oculto) */
+header {
+    background-color: #1B262C; /* Azul oscuro profundo */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #000000;
+}
+
+header h1 {
+    /* IMPORTANTE: El color blanco debe estar pegado al # y con !important */
+    color: #ffffff !important; 
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;       /* Espaciado estilo "Pulcritud" */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* 4. NAVEGACIÓN (Botones con efecto al pasar el mouse) */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;                 /* Espacio entre botones */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #1B262C;
+}
+
+.nav-link {
+    text-decoration: none;     /* Quita el subrayado azul */
+    color: #1B262C;
+    background-color: #F9D423; /* Amarillo de los stickers */
+    padding: 10px 25px;
+    border: 2px solid #1B262C;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;          /* Velocidad del cambio de color */
+}
+
+.nav-link:hover {
+    background-color: #1B262C; /* Se invierten los colores al tocar con el mouse */
+    color: #F9D423;
+}
+
+/* 5. MAIN (División de las dos columnas) */
+main {
+    display: flex;             /* Pone el Índice al lado de la Foto */
+}
+
+/* Ajuste del área del índice: Ancho al 45% */
+.indice {
+    width: 45%;                
+    border-right: 3px solid #1B262C; /* Línea divisoria central */
+    padding: 45px 35px;        /* Más espacio interno arriba y abajo */
+}
+
+.hero {
+    width: 55%;                
+    padding: 45px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 6. IMAGEN DESTACADA */
+.hero img {
+    width: 100% !important;
+    max-width: 450px;
+    height: auto;
+    border: 5px solid #1B262C;
+    box-shadow: 12px 12px 0px #F9D423; /* Sombra amarilla sólida */
+    margin-bottom: 20px;       /* Espacio debajo de la imagen */
+}
+
+/* 7. DETALLES DE TEXTO (Índice) */
+.title-section {
+    border-bottom: 2px solid #1B262C;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-size: 1.4rem;        
+}
+
+.item {
+    margin-bottom: 35px;      
+}
+
+.item p {
+    font-size: 1rem;          
+    line-height: 1.5;         
+    color: #333;
+}
+
+.number {
+    font-weight: bold;
+    font-size: 1.1rem;        
+    border-left: 6px solid #F9D423; 
+    padding-left: 15px;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* 8. FOOTER SEPARADO (La placa de contacto) */
+footer {
+    background-color: #000000;
+    width: 500px;              
+    padding: 25px;
+    text-align: center;
+    border: 3px solid #F9D423; 
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.2); 
+    /* LA CLAVE: Usamos un margen superior grande para bajarlo */
+    margin-top: 40px;          
+}
+
+.footer-link {
+    color: #F9D423;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
