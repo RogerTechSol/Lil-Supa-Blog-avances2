@@ -109,3 +109,62 @@ figcaption {
     border-left: 6px solid #d92323; /* Rojo exacto */
     background-color: #f9f9f9;
 }
+/* RESPONSIVE: Tablets y Móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px; /* Menos margen exterior */
+    }
+
+    .magazine-page {
+        padding: 30px 20px; /* Reducimos el padding de 50px */
+        box-shadow: 6px 6px 0px #000; /* Sombra más discreta */
+    }
+
+    /* Ajuste de Títulos */
+    .header h1 {
+        font-size: 2.5rem; /* El 3.5rem original se saldría de la pantalla */
+        line-height: 1;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    /* Reconfiguración de la Barra de Navegación */
+    .nav-windows {
+        grid-template-columns: repeat(2, 1fr); /* De 4 columnas a 2x2 */
+    }
+
+    .window {
+        font-size: 0.7rem;
+        padding: 15px 5px; /* Más área de toque para dedos */
+    }
+
+    /* Cuerpo de texto y citas */
+    .content p {
+        font-size: 1rem; /* Texto ligeramente más pequeño para lectura cómoda */
+        line-height: 1.5;
+    }
+
+    .main-quote {
+        font-size: 1.1rem;
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    figcaption {
+        text-align: left; /* En móvil se lee mejor a la izquierda */
+        font-size: 0.65rem;
+    }
+}
+
+/* Ajuste extra para teléfonos muy pequeños (iPhone SE, etc.) */
+@media (max-width: 380px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-windows {
+        grid-template-columns: 1fr; /* Una sola columna si el espacio es crítico */
+    }
+}

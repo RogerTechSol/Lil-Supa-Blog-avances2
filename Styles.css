@@ -129,3 +129,55 @@ h2 {
     letter-spacing: 3px;
     border-top: 3px solid var(--vandal-black);
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Menos espacio en los bordes de la pantalla */
+    }
+
+    .cover-container {
+        box-shadow: 8px 8px 0px var(--vandal-red); /* Sombra más pequeña para no salirse */
+    }
+
+    /* Ajuste de Tipografía */
+    .top-banner h1 {
+        font-size: 2.2rem; /* El título original es demasiado grande para móvil */
+        letter-spacing: 1px;
+    }
+
+    /* Navegación adaptable */
+    .nav-red {
+        flex-wrap: wrap; /* Permite que los botones bajen si no caben */
+        gap: 8px;
+        padding: 15px 10px;
+    }
+
+    .btn-red {
+        flex: 1 1 40%; /* Los botones se ensanchan para llenar el espacio */
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    /* Cambio de 2 columnas a 1 columna */
+    .content-layout {
+        grid-template-columns: 1fr; 
+        padding: 25px;
+        gap: 30px;
+    }
+
+    /* Reordenar: Foto arriba o abajo */
+    .image-wrapper {
+        order: -1; /* Esto sube la imagen por encima del texto en móvil */
+        margin-top: 0;
+        box-shadow: 6px 6px 0px var(--vandal-red);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .red-line {
+        margin: 0 auto 20px auto; /* Centra la línea roja */
+    }
+}

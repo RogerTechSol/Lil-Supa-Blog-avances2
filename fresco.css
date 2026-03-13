@@ -84,3 +84,75 @@ h1 { font-family: 'Big Shoulders Display', sans-serif; font-size: 3.5rem; letter
 
 .industrial-footer { margin-top: 60px; text-align: center; color: var(--accent-gray); letter-spacing: 3px; font-size: 0.8rem; }
 
+/* RESPONSIVE: Tablets y Smartphones */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Cabecera: Apilamos el título y el buscador */
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Reducimos el tamaño para que no desborde */
+        letter-spacing: 3px;
+    }
+
+    .search-area, .search-area input {
+        width: 100%; /* El buscador ocupa todo el ancho */
+        text-align: center;
+    }
+
+    /* Navegación: De una fila a una cuadrícula de 2x2 */
+    .windows-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .window {
+        font-size: 1rem;
+        padding: 20px 5px; /* Más espacio para pulsar con el dedo */
+    }
+
+    /* Ajuste de la caja de afirmación (Statement Box) */
+    .statement-box {
+        width: 95%; /* Más ancha en móvil */
+        margin: -20px auto 40px; /* Menos solapamiento con la foto */
+        padding: 20px;
+        border-left-width: 6px; /* Borde un poco más fino */
+    }
+
+    .statement-box h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajuste de las tarjetas inferiores */
+    .info-card {
+        padding: 20px;
+    }
+
+    .info-card h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Ajuste extra para móviles muy pequeños (iPhone SE / Mini) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .windows-nav {
+        grid-template-columns: 1fr; /* Una ventana por fila */
+    }
+
+    .main-photo {
+        max-height: 300px; /* Acortamos la foto para no hacer tanto scroll */
+    }
+}
