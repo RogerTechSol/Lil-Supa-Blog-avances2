@@ -103,10 +103,6 @@ h1 { font-family: 'Big Shoulders Display', sans-serif; font-size: 3.5rem; letter
         letter-spacing: 3px;
     }
 
-    .search-area, .search-area input {
-        width: 100%; /* El buscador ocupa todo el ancho */
-        text-align: center;
-    }
 
     /* Navegación: De una fila a una cuadrícula de 2x2 */
     .windows-nav {
